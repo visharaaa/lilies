@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Martian Mono', monospace;
+  background-color: #f9f9ee;
+  color: #333;
+  text-align: center;
+  padding: 2rem;
+  overflow-x: hidden; /* Prevents scrollbars from the large circle */
+}
+
+/* Main title */
+.main-title {
+  font-size: 2.5rem;
+  color: #000;
+  margin-bottom: 5rem; /* Increased space for the bouquet */
+}
+
+/* Card Container */
+.card {
+  position: relative;
+  display: inline-block;
+  margin-top: 180px; /* Increased top margin to give the floating elements room */
+  margin-bottom: 3rem;
+  width: fit-content;
+  transform: rotate(-1deg); /* negative = tilt left, positive = tilt right */
+
+}
+
+/* Faded Circle - Anchored to the top of the card */
+.bouquet-bg {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  /* Move circle up so exactly half is peeking out from the letter's top edge */
+  transform: translate(-50%, -50%); 
+  width: 400px; /* Reduced size to keep it contained */
+  height: 400px;
+  background: #F5F5DC; 
+  border-radius: 50%;
+  z-index: 0; 
+}
+
+/* Bouquet SVG - Now sized to fit inside the circle */
+.bouquet {
+  position: absolute;
+  top: 0; 
+  left: 50%;
+  /* -55% pulls it up so flowers are in the circle, stems on the letter */
+  transform: translate(-50%, -55%); 
+  width: 320px; /* Reduced from 500px so it fits inside the 400px circle */
+  height: auto;
+  z-index: 3; 
+}
+
+/* Ensure the image inside doesn't blow up */
+.flower {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Letter - The base card */
+.letter {
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 0;
+  width: 350px; /* Standard card width */
+  max-width: 90vw;
+  text-align: left;
+  /* Space at the top of the card text so stems don't cover the words */
+  padding: 8rem 2rem 2rem 2rem; 
+  position: relative;
+  z-index: 2; 
+  margin-top: 100px;
+}
+
+/* MOBILE ADJUSTMENTS */
+@media screen and (max-width: 500px) {
+  .card {
+    margin-top: 120px;
+  }
+  
+  .bouquet-bg {
+    width: 280px;
+    height: 280px;
+  }
+
+  .bouquet {
+    width: 220px;
+  }
+
+  .letter {
+    padding-top: 5rem;
+  }
+}
+
+.letter h2 {
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.letter p {
+  line-height: 1.6;
+  font-size: 1rem;
+  color: #333;
+}
+
+/* YouTube / Video Button Section */
+.video-section {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem; /* Space between buttons if you add more */
+}
+
+.video-button {
+  display: inline-block;
+  /* The "Share" button look: border with matching background */
+  background-color: #f9f9ee; 
+  color: #000;
+  padding: 0.8rem 2rem;
+  border: 1px solid #000;
+  border-radius: 0; /* Makes it perfectly rectangular */
+  text-decoration: none;
+  font-family: 'Martian Mono', monospace; /* Matches the text style in the image */
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+/* Hover Effect: Turns black with white text */
+.video-button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ===== MOBILE ===== */
+@media screen and (max-width: 600px) {
+  .bouquet-bg {
+    width: 350px;
+    height: 350px;
+    transform: translate(-50%, -80%);
+  }
+
+  .bouquet {
+    width: 300px;
+  }
+
+  .letter {
+    width: 90vw;
+    padding-top: 3rem;
+  }
+}
