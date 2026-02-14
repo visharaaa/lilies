@@ -132,15 +132,15 @@ body {
   }
   
   .bouquet-bg {
-    width: 280px;
-    height: 280px;
+    width: 340px;
+    height: 340px;
   }
 
   .bouquet {
-    width: 220px;
+    width: 300px;
   }
 
   .letter {
-    padding-top: 5rem;
+    padding-top: 2rem;
   }
 }
