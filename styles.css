@@ -125,24 +125,24 @@ body {
 /* MOBILE ADJUSTMENTS */
 @media screen and (max-width: 500px) {
   .card {
-    margin-top: 60px;
+    margin-top: 70px;
     transform: rotate(-0.5deg); /* smaller tilt so it doesn't push off-screen */
   }
   
   .bouquet-bg {
-    width: 350px;      /* smaller circle for mobile */
-    height: 350px;
+    width: 380px;      /* smaller circle for mobile */
+    height: 380px;
     left: 50%;
     transform: translate(-50%, -40%); /* move slightly down so it's not at the edge */
   }
 
   .bouquet {
-    width: 300px;      /* scale bouquet smaller inside circle */
+    width: 340px;      /* scale bouquet smaller inside circle */
     transform: translate(-50%, -45%); /* adjust vertical position */
   }
 
   .letter {
-    padding-top: 6rem;  /* less top padding for mobile */
+    padding-top: 7rem;  /* less top padding for mobile */
     max-width: 90vw;    /* ensure it fits the screen */
     margin: 80px auto 0 auto; /* center horizontally */
   }
